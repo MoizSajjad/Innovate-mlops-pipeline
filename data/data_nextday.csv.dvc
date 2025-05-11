@@ -1,0 +1,5 @@
+outs:
+- md5: 8e9453824696561a4d6416a53cb495f6
+  size: 27084718
+  hash: md5
+  path: data_nextday.csv
