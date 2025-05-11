@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamlit-frontend
+  template:
+    metadata:
+      labels:
+        app: streamlit-frontend
+    spec:
+      containers:
+        - name: streamlit-frontend
+          image: mlops-streamlit-frontend
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8501
